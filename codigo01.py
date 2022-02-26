@@ -204,7 +204,7 @@ while (cont < 6):
 # 26, faca um programa que leia a idade de seis empregados, ou seja, tem que inserir 6 idades, somar as idades
 cont = 0
 total = 0
-while (cont < 3):
+while (cont < 6):
     idade = int(input("Digite a idade"))
     total = total + idade
     cont +=1
