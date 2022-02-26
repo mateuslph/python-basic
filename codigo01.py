@@ -105,3 +105,107 @@ carro1 = input("Informe a marca do primeiro carro \n")
 carro2 = input("Informe a marca do segundo carro \n")
 separador = input("Escolha um separador desses (**, //, $$, &&, \)")
 print(carro1, carro2, sep=separador)
+
+# 19, imprima o nome informado de dois veiculos, um em cada linha com um unico print
+carro1 = input("Informe a marca do primeiro carro 1 \n")
+carro2 = input("Informe a marca do segundo carro 2 \n")
+print(carro1, carro2, sep="\n")
+
+# 20, o usuario deve inserir na lista tres nomes de carro, depois deve escolher qual a posicao e imprimir na tela, em seguida escolher 
+# qual posicao da letra do carro que quer imprimir
+nCarros = []
+while len(nCarros) < 3:
+    print(nCarros)
+    tmp = input("Insira o nome do carro: ")
+    nCarros.append(tmp)
+print("\n", nCarros)
+escolhaCarro = int(input("Digite o número do carro: "))
+print(nCarros[escolhaCarro -1])
+escolhaLetra = int(input("Digite o número da letra: "))
+print(nCarros[escolhaCarro -1][escolhaLetra -1])
+# outro metodo soh com o que foi ja aprendido
+carroA = input("Informe o nome do carro A: ")
+carroB = input("Informe o nome do carro B: ")
+carroC = input("Informe o nome do carro C: ")
+lista = carroA, carroB, carroC
+posicao = int(input("Informe a posicao do carro, se é: 1, 2, ou 3: "))
+print(lista[posicao-1])  # "-1" eh uma simples subtracao da "posicao", para a numeracao visual equivaler a posicao de indices da lista
+letra = int(input("Informe a posicao da letra do carro escolhido: "))
+print(lista[posicao-1] [letra-1])
+
+# 21, operacoes basicas matematicas - Imprima na tela a soma, subtracao, divisao e moltiplicacao de dois numeros informados pelo 
+# usuario, adicional fazer resto e o cociente da divisao
+num1 = float(input("Digite o primeiro numero"))
+num2 = float(input("Digite o primeiro numero"))
+soma = (num1+num2)
+subtracao = (num1-num2)
+multiplicacao = (num1*num2)
+divisao = (num1/num2)
+restoDaDivisao = (num1%num2)
+cocienteDaDivisao = (num1//num2)
+print("Soma: {} Subtracao: {} Divisão: {} Multiplicação: {} \nResto da divisao {} Cociente da divisao {} ".format(soma, subtracao, "%.2f%", divisao, multiplicacao, restoDaDivisao, cocienteDaDivisao))
+
+# 22, construa uma condicao "if"
+from turtle import up
+
+
+numero = int(input("Digite um numero inteiro"))
+if (numero > 0):
+    print("Número positivo")
+elif (numero < 0):
+    print("Número negativo")
+else:
+    print("O número nulo")
+
+# 23, deixe a frase do usuario em letra 
+frase = input("Escreva sua frase")
+formato = input("Digite 'AZ' para maiusculas, ou 'az' para minúsculas, ou AzA, para as primeira letras de cada palavra em maiúsculas")
+if (formato == "AZ"):
+    print(frase.upper())
+elif (formato == "az"):
+    print(frase.lower())
+elif (formato == "AzA"):
+    print(frase.title())
+else:
+    print("Formato inválido")
+
+# 24, imprima na tela o maior numero, o menor numero da lista de tres numero inteiros informado pelo usuario, o tamanho, soma,
+# ordem crescente e decrescente
+numero1 = int(input("Informe o primeiro número em inteiro"))
+numero2 = int(input("Informe o segundo número em inteiro"))
+numero3 = int(input("Informe o terceiro número em inteiro"))
+lista = [numero1, numero2, numero3]
+print("Comprimento da lista: ", len(lista))
+print("Maior valor: ", max(lista))
+print("Menor valor: ", min(lista))
+print("A soma dos números da lista : ", sum(lista))
+lista.sort()
+print("Lista em forma crescente: ", lista)
+lista.reverse()
+print("Lista em forma decrescente: ", lista)
+# ou
+print(f'A lista em ordem decrescente é: {sorted(lista, reverse=True)}') 
+
+# 25, faca um programa qiue verifique se o estudante foi aprovado ou reprovado, onde para ser aprovado o aluno precisa nota 6
+# em portugues e matematica
+matematica = int(input("Digite a nota em Matemática"))
+portugues = int(input("Digite a nota em Português"))
+if (matematica >= 6) and (portugues >= 6):
+    print("O aluno foi aprovado")
+else:
+    print("O aluno foi reprovado")
+
+# 26, faca um programa que leia a idade de seis empregados, ou seja, tem que inserir 6 idades
+cont = 0
+while (cont < 6):
+    idade = int(input("Digite a idade"))
+    cont +=1
+
+# 26, faca um programa que leia a idade de seis empregados, ou seja, tem que inserir 6 idades, somar as idades
+cont = 0
+total = 0
+while (cont < 3):
+    idade = int(input("Digite a idade"))
+    total = total + idade
+    cont +=1
+print("A soma é: ", total)
